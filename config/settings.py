@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%4t91y!i774$zl6i5s9xokaiurztzoqo66#ihrhkjtx3crq9b3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+# 리스트 안에 '*'를 추가해줘야 배포했을 때 접근이 가능함
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
