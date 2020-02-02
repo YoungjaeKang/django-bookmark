@@ -1,233 +1,249 @@
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
 #container {
-    width: 418px;
-    height: 739px;
-    border-radius: 0 0 23px 23px;
-    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.16);
-    border: solid 1px #ffffff;
-    background-color: #ffffff;
     position: absolute;
     left: 50%;
     top: 50%;
-    /* margin-left: -209px;
-    margin-top: -369.5px; */
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -60%);
+    width: 418px;
+    height: 739px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 23px;
 }
 
 #header {
-    /* 일반사항 */
-    height: 103px;
-    background-color: #ff7063;
-    font-size: 20px;
+    width: 100%;
+    height: 108px;
+    background: #FF7063;
+    border-radius: 5px 5px 0 0;
     font-weight: 500;
-    color: #ffffff;
-    
-    /* 중앙 정렬 */
+    font-size: 20px;
+    color: #fff;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /*margin-bottom: ;*/
 }
 
-#nav {
-    height: 64px;
-    font-size: 25px;
-    font-weight: 800;
-    color: #cecece;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
+#header > div:nth-child(1) {
+    margin-bottom: 10px;
 }
 
-#nav a {
-    color: #cecece;
-    text-decoration: none;
+.btn_container {
+    text-align: center;
+    /*background: gray;*/
+    padding: 10px 0;
 }
 
-#nav > div {
+.btn_container button {
+
+    margin: 0 10px;
+
     position: relative;
+    border: none;
+
+    transition: all 0.5s;
+    outline:none;
+}
+.btn_container button a{
+    font-size: 20px;
+    font-weight: 700;
+    color: #cecece;
+    display: block;
 }
 
-
-#nav > div:after {
+.btn_container button a:after {
     content: '';
     width: 5px;
     height: 5px;
-    background: #6c6c6c;
-    position: absolute;
-    left: 0;
-    top: 0;
-    
-    left: -20px;
-    top: 50%;
-    margin-top: -.5px;
+    background: #6C6C6C;
     border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    margin-top: -2.5px;
+    transition: all 0.2s ease-in-out;
+    transform: translateX(-10px);
     opacity: 0;
 }
 
-#nav >div.active:after {
+.btn_container button a.active{
+    color: #6C6C6C;
+}
+
+.btn_container button a.active:after{
     opacity: 1;
+    transform: translateX(0);
 }
 
-#nav > div.active a {
-    color: #6c6c6c;
+.btn_container a{
+    text-decoration: none;
 }
 
-#nav > div:first-child {
-    margin-right: 50px;
-}
-
-.empty-area {
-    width: 341.3px;
-    height: 423.8px;
-    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
-    background-color: #ffffff;
-
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 70px;
-
-    font-size: 18px;
-    font-weight: 900;
-    color: #e8e8e8;
-
+/*------------------------------컨텐츠가 없을때*/
+.empty_area {
+    width: 340px;
+    height: 460px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.22);
+    margin: 40px auto 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-#over-container > article {
-    height: 70.8px;
-    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
-    background-color: #ffffff;
-    margin-bottom: 30px;
-    padding: 10px;
-    position: relative;
+
+.empty_area > p {
+    color: #E8E8E8;
+    font-weight: 600;
+    line-height: 40px;
 }
 
-#over-container > article > span {
+
+
+/*------------------------------컨텐츠가 있을때*/
+
+
+#over_container{
+    /*width: 340px;*/
+    padding: 0 30px;
+    height: 450px;
+    /*background: #ddd;*/
+    margin: 40px auto 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+#over_container .scroll_inner > article{
+    height: 70px;
+    /*background: red;*/
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.22);
+    margin-bottom: 15px;
+    position: relative;
+    padding: 10px;
+}
+
+#over_container .scroll_inner > article > span{
     display: block;
 }
 
-#over-container {
-    /* width: 341px; */
-    height: 511px;
-    padding: 0 30px;
-    /* background-color: red; */
-    margin: 30px auto 0 auto;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
-#over-container .site_name {
-    font-size: 18px;
-    font-weight: 900;
-    color: #4b4b4b;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#over-container .line {
+#over_container .scroll_inner > article .line{
     width: 30px;
     height: 2px;
-    background-color: #8e8e8e;
-    margin-bottom: 10px;
+    background: #8E8E8E;
+    margin: 10px 0;
 }
 
-#over-container .site_url {
+.site_name{
+    color:#4B4B4B;
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+.site_url a{
     font-size: 12px;
-    font-weight: 500;
-}
-
-#over-container .site_url > a{
-    color: #7499ff;
+    color:#7499FF;
     text-decoration: none;
 }
 
+.site_url a:hover{
+    text-decoration: underline;
+}
 
-#over-container .form_container {
+
+.form_container{
     position: absolute;
     right: 10px;
     top: 10px;
-    display: flex;
-    flex-direction: column;
 }
 
-#over-container .form_container > button:first-child {
-    margin-bottom: 10px;
-    background-color: #b7b7b7;
-}
-
-#over-container .form_container > button:last-child {
-    background-color: #ff9595
-}
-
-
-#over-container .form_container > button {
-    border: none;
-    width: 47.2px;
-    height: 15.3px;
+.form_container > *{
+    display: block;
+    width: 47px;
+    height: 15px;
+    text-align: center;
     border-radius: 2px;
-    color: #fff;
+
+}
+
+.form_container > a{
+    font-size: 11px;
+    color:#fff;
+    text-decoration: none;
+    background: #B7B7B7;
+    margin-bottom: 10px;
+    line-height:15px;
+}
+
+.form_container input{
+    font-size: 11px;
+    color:#fff;
+    background: #FF9595;
+    border: none;
+    border-radius: 2px;
+    outline:none;
     cursor: pointer;
 }
 
-/* ============= create.html ============= */
 
-#create-container {
+
+
+/*--------------------------------수정페이지*/
+
+
+#edit_container{
+    width: 341px;
+    height: 130px;
+    /*background: #ddd;*/
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform:translate(-50%,-50%);
 }
 
-#create-container .boxes {
-    width: 341.3px;
-    height: 39.8px;
-    box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
-    background-color: #ffffff;
+#edit_container > form > p{
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.22);
+    margin-bottom: 15px;
+    height: 40px;
     display: flex;
-    /* justify-content: center; */
+    /*justify-content: center;*/
     align-items: center;
 }
 
-#create-container .site {
-    margin-bottom: 32.2px;
+#edit_container > form > p > label{
+    /*justify-self: flex-start;*/
+    width: 70px;
+    margin-left: 10px;
 }
 
-#create-container .url {
-    margin-bottom: 40px;
+
+#edit_container > form > p > input{
+
+    width: 240px;
+    height: 24px;
+
 }
 
-#create-container label {
-    margin-bottom: 63px;
-    font-size: 15px;
-    font-weight: 300;
-    color: #4b4b4b;
-    margin: 0 11px 0 15px;
-}
-
-#create-container input[type='text'] {
-    width: 241.3px;
-    height: 24.8px;
-    border: solid 1px #d9deff;
+#edit_container .create{
     position: absolute;
-    margin-left: 90px;
-    /* background-color: red; */
-    
-}
-
-#create-container input[type='submit'] {
-    display: block;
-    width: 66.6px;
-    height: 21.6px;
-    border-radius: 2px;
-    background-color: #ff7063;
-    color: #fff;
+    left: 50%;
+    transform:translateX(-50%);
+    bottom: -30px;
+    font-size: 15px;
+    color:#fff;
+    width:66px;
+    height: 21px;
+    background:#FF7063;
     border: none;
-    margin: 0 auto;
+    border-radius: 2px;
     cursor: pointer;
+
 }

@@ -1,104 +1,58 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookmark</title>
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Bookmark</title>
+<!--    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">-->
+
 </head>
 <body>
-    <section id="container">
-        <header id="header">
-            <div class="icon"><img src="src/bookmark.png" alt="북마크아이콘"></div>
-            <div>bookmark</div>
-        </header>
-        <nav id="nav">
-            <div class="active"><a href="index.html">home</a></div>
-            <div><a href="create.html">create</a></div>
-        </nav>
 
-        <!-- <section class="empty-area">
-            <div>
-                북마크 항목이 비어있습니다.<br>
-                <br>
-                create를 눌러 북마크를 추가해주세요!
-            </div>
-        </section> -->
 
-        <section id="over-container">
-            <article>
-                <span class="site_name">장고 웹 프레임워크 사이트</span>
-                <span class="line"></span>
-                <span class="site_url"><a href="https://www.djangoproject.com/">hhttps://www.djangoproject.com/</a></span>
-                
-                <div class="form_container">
-                    <button>edit</button>
-                    <button>create</button>
-                </div>
-            </article>
-            <article>
-                <span class="site_name">장고 웹 프레임워크 사이트</span>
-                <span class="line"></span>
-                <span class="site_url"><a href="https://www.djangoproject.com/">hhttps://www.djangoproject.com/</a></span>
-                
-                <div class="form_container">
-                    <button>edit</button>
-                    <button>create</button>
-                </div>
-            </article>
-            <article>
-                <span class="site_name">장고 웹 프레임워크 사이트</span>
-                <span class="line"></span>
-                <span class="site_url"><a href="https://www.djangoproject.com/">hhttps://www.djangoproject.com/</a></span>
-                
-                <div class="form_container">
-                    <button>edit</button>
-                    <button>create</button>
-                </div>
-            </article>
-            <article>
-                <span class="site_name">장고 웹 프레임워크 사이트</span>
-                <span class="line"></span>
-                <span class="site_url"><a href="https://www.djangoproject.com/">hhttps://www.djangoproject.com/</a></span>
-                
-                <div class="form_container">
-                    <button>edit</button>
-                    <button>create</button>
-                </div>
-            </article>
-            <article>
-                <span class="site_name">장고 웹 프레임워크 사이트</span>
-                <span class="line"></span>
-                <span class="site_url"><a href="https://www.djangoproject.com/">hhttps://www.djangoproject.com/</a></span>
-                
-                <div class="form_container">
-                    <button>edit</button>
-                    <button>create</button>
-                </div>
-            </article>
-            <article>
-                <span class="site_name">장고 웹 프레임워크 사이트</span>
-                <span class="line"></span>
-                <span class="site_url"><a href="https://www.djangoproject.com/">hhttps://www.djangoproject.com/</a></span>
-                
-                <div class="form_container">
-                    <button>edit</button>
-                    <button>create</button>
-                </div>
-            </article>
-            <article>
-                <span class="site_name">장고 웹 프레임워크 사이트</span>
-                <span class="line"></span>
-                <span class="site_url"><a href="https://www.djangoproject.com/">hhttps://www.djangoproject.com/</a></span>
-                
-                <div class="form_container">
-                    <button>edit</button>
-                    <button>create</button>
-                </div>
-            </article>
-        </section>
+<section id="container">
+    <header id="header">
+        <div><img src="img/bookmark.png" alt="북마크아이콘"></div>
+        <div>BOOKMARK</div>
+    </header>
+
+    <section class="btn_container">
+        <button class=""><a href="index.html" class="active home">HOME</a></button>
+        <button class=""><a href="create.html" class="create">CREATE</a></button>
     </section>
+
+
+<!--        <div class="empty_area">-->
+<!--            <p>-->
+<!--                북마크 항목이 비어있습니다. <br>-->
+<!--                create를 눌러 새 북마크를 생성해보세요.-->
+<!--            </p>-->
+<!--        </div>-->
+
+    <section id="over_container">
+        <div class="scroll_inner">
+
+            <article class="list01">
+                <span class="site_name">장고문법 참고사이트</span>
+                <span class="line"></span>
+                <span class="site_url"><a href="#">www.naver.com/blog/django?php</a></span>
+
+                <div class="form_container">
+                    <a href="create.html">edit</a>
+                    <form>
+                        <input type="submit" value="delete">
+                    </form>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+</section>
+
+<script src="js/main.js"></script>
 </body>
 </html>
